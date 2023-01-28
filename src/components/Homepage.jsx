@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Chatbox from "./Chatbox";
 
 const Homepage = () => {
+  const [msg, setMsg] = useState("");
   return (
-    <div className="w-full h-full">
+    <div className="flex flex-col w-screen min-h-screen">
       <Header />
-      <div className="flex w-screen h-screen outline-dashed justify-center">
+      <div className="flex outline-dashed">
         <Sidebar />
-        <Chatbox />
+        <Chatbox msg={msg} />
       </div>
     </div>
   );
