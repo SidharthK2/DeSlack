@@ -86,19 +86,19 @@ const Homepage = () => {
         };
         // console.log(JSON.stringify(info));
         setMsgList((msgList) => {
-          return [...msgList, { sender: sender, messgae: message }];
+          return [...msgList, { sender: sender, message: message }];
         });
       });
-      console.log("msgList:", msgList);
     })();
   }, []);
+  console.log("msgList:", msgList);
 
   return (
     <div className="flex flex-col w-screen min-h-screen">
       <Header />
       <div className="flex outline-dashed">
         <Sidebar roomList={roomList} />
-        <Chatbox msg={msg} setMsg={setMsg} sender={sender} />
+        <Chatbox msg={msg} setMsg={setMsg} msgList={msgList} />
       </div>
     </div>
   );

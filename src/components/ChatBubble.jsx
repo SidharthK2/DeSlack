@@ -10,7 +10,8 @@ const ChatBubble = ({ sender, msg }) => {
   //     }
 
   //   }
-  if (account.toString() == sender?.toString()) {
+  console.log(account);
+  if (account.toString().toUpperCase() == sender.toString().toUpperCase()) {
     return (
       <>
         <div className="chat chat-start">
