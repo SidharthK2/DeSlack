@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Chatbox from "./Chatbox";
+import HuddleElem from "./HuddleElem";
+
 import { useMoralis, useWeb3Contract } from "react-moralis";
 import { ethers } from "ethers";
 import { abi, contractAddress } from "../constants/constants";
@@ -96,6 +98,7 @@ const Homepage = () => {
   return (
     <div className="flex flex-col w-screen min-h-screen">
       <Header />
+      <HuddleElem />
       <div className="flex outline-dashed">
         <Sidebar roomList={roomList} />
         <Chatbox msg={msg} setMsg={setMsg} msgList={msgList} />
